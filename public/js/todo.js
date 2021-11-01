@@ -30,6 +30,9 @@ writeForm.addEventListener("submit", e => {
 
     //create update form
     updateButton.addEventListener("click", e => {
+        if(listLi.querySelector("form")){
+            return listLi.querySelector("form").remove()
+        }
         let updateForm = document.createElement("form")
         listLi.appendChild(updateForm)
 
